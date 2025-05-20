@@ -37,17 +37,16 @@ nyc-taxi-etl/
 
 - **Extract**: Loads raw trip data from CSV or Parquet
 - **Transform**:
-  - Handles missing/null values
-  - Filters invalid rows (e.g., negative fares, zero distances)
-  - Converts timestamps and calculates trip duration
-  - Verifies `total_amount` equals the sum of individual charges
-- **Load**: Saves clean data to the database
+  - Creates dimension tables
+  - Handles missing/null values, filters invalid rows (e.g., negative fares, zero distances), etc. in the fact table
+- **Load**: Saves clean data in the database
 
 ---
 
 ## 🚀 How to Run It
 - **Run** `run_etl.py`
+  
 ---
 
-## ETL Flow Diagram
+## ETL Diagram 
 <img src="diagrams/erd_project1.png" width="700"/>
