@@ -18,6 +18,7 @@ nyc-taxi-etl/
 ├── diagrams/
 │ └── erd_project1.png # Table structure
 ├── run_etl.py # Orchestrates the full ETL pipeline
+├── sample_queries.sql # Sample SQL queries on cleaned data 
 └── README.md # Project documentation</code> </pre>
 
 ---
@@ -46,6 +47,11 @@ nyc-taxi-etl/
 ## 🚀 How to Run It
 - **Run** `run_etl.py`
   
+---
+
+## 🧪 Sample SQL Queries on Cleaned Data
+- These queries demonstrate how to analyze and validate the cleaned NYC Yellow Taxi dataset after the ETL process: `sample_queries.sql`
+
 ---
 
 ## ETL Diagram 
