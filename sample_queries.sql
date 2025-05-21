@@ -24,8 +24,8 @@ CREATE OR REPLACE VIEW project1.ny_tripdata_v AS
 
 
   SELECT p.payment_type_desc, 
-	       count(*) total_count,
-	       sum(t.total_amount) total_amount
+	 count(*) total_count,
+	 sum(t.total_amount) total_amount
     FROM project1.ny_tripdata_v t
     JOIN project1.ny_paymtype p
       ON p.payment_type = t.payment_type
@@ -77,7 +77,7 @@ GROUP BY p.payment_type_desc
               ON p.payment_type = t.payment_type
             WHERE p.payment_type IN (1, 2) --'Credit card' or 'Cash'
               AND t.airport_fee > 0)
-GROUP BY pickup_date,
-		     borough,
-		     payment_type_desc
+GROUP BY pickup_date, 
+	 borough,
+	 payment_type_desc
 ;
